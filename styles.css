@@ -1,0 +1,57 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Lato', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#workExperience ul li,
+#education ol li{
+    position:relative;
+    border-left: solid 7px #ffc107;
+}
+#education ol li{
+    counter-increment: li;
+}
+#workExperience ul li:before,
+#education ol li:before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    background: #ffc107;
+    border: solid 4px #212529;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -17px;
+    color:#212529;
+    font-weight: bold;
+}
+#education ol li:before{
+    content: counter(li);
+}
+#projects .box{
+    display: flex;
+    flex-direction: column-reverse;
+    width:20dvw;
+    height:20dvw;
+    background-size: cover;
+}
+#projects .box .box-text{
+    width:20dvw;
+    height:0;
+    overflow: hidden;
+    transition: .3s;
+    box-sizing: border-box;
+}
+#projects .box:hover .box-text{
+    height: 20dvw;
+    padding:10% inherit;
+}
